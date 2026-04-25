@@ -15,7 +15,15 @@
 
 ## Geração de build
 - Na pasta do projeto: `wails build`
+- __Nota:__ caso o dist do frontend esteja em pasta diferente de `frontend/dist`, informar no `main.go` acima da definição de `assets`
+```golang
+    //go:embed all:frontend/jwtsecret-generator/dist
+    var assets embed.FS
+```
 
 ## Acesso aos métodos e funções do backend
 - `wails dev` irá fazer os bindings em JavaScript, bastando importar a função desejada
--- `import {FUNÇÃO} from './wailsjs/go/main/App'`
+```javascript
+    import {GenerateJwtSecret} from './wailsjs/go/main/App'
+```
+
