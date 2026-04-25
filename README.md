@@ -9,3 +9,13 @@
 - Acrescentar `"frontend:dir": "frontend",`
 - Atualizar: `"frontend:dev:serverUrl": "http://localhost:5173",`
 - Atualizar os parâmetros de `author` para os desejados
+
+## Preparação do projeto 
+- Na pasta do projeto: `wails dev`
+
+## Geração de build
+- Na pasta do projeto: `wails build`
+
+## Acesso aos métodos e funções do backend
+- `wails dev` irá fazer os bindings em JavaScript, bastando importar a função desejada
+-- `import {FUNÇÃO} from './wailsjs/go/main/App'`
